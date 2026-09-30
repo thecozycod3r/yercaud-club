@@ -1,0 +1,22 @@
+# Yercaud Club
+
+> Yercaud Club is a club in Yercaud, Tamil Nadu, India, established in 1897. This website covers chambers, eight facilities, dining, and 18 affiliated clubs.
+
+The club is located in Jerina Nagar, Yercaud 636601. Contact: +91 4281 222212 or yercaudclub@gmail.com.
+
+Published prices and affiliations are based on the club's tariff card dated 2 September 2026. Prices are in Indian rupees (INR). The club should confirm current tariffs, access arrangements, and availability. No live room inventory, online reservation confirmation, or payment service is provided by this website. Facility hours and charges not listed in the tariff card are not specified.
+
+The eight facilities are tennis, badminton, billiards, table tennis, gym, locker room, sports lounge, and dining. Yercaud Club (established 1897) should not be confused with Yercaud Library & Sports Club.
+
+## Club information
+
+- [Club overview and chambers](/index.md): Establishment, contact information, room tariffs, longer stays, and guest charges.
+- [Facilities](/facilities/index.md): All eight facilities, published sports rates, and dining information.
+- [Affiliated clubs](/affiliated-clubs/index.md): The complete list of 18 affiliated clubs and visiting-member information.
+- [Original tariff card and food menu](/yercaud-club-tariff-september-2026.pdf): Source document for published room rates, sports charges, menu prices, and affiliations.
+
+## Optional
+
+- [Homepage](/): Photographs, chambers, club life, and contact information.
+- [Facilities webpage](/facilities/): Facility photographs, expandable sports tariffs, and selected menu dishes.
+- [Affiliated clubs webpage](/affiliated-clubs/): Searchable directory with location filtering and verified external club website links.

@@ -1,0 +1,66 @@
+import SiteLink, {sitePath} from './SiteLink.jsx';
+import ClubImage from './ClubImage.jsx';
+import React, {useState, useRef, useEffect} from 'react';
+import {createRoot} from 'react-dom/client';
+import {ArrowUpRight, Phone, List, X, DownloadSimple, Plus, CaretLeft, CaretRight, MapPin} from '@phosphor-icons/react';
+import '@fontsource/cormorant-garamond/latin-400.css';
+import '@fontsource/cormorant-garamond/latin-500.css';
+import '@fontsource/cormorant-garamond/latin-400-italic.css';
+import '@fontsource/manrope/latin-400.css';
+import '@fontsource/manrope/latin-500.css';
+import '@fontsource/manrope/latin-600.css';
+import './styles.css';
+import Header from './Header.jsx';
+import AffiliatedClubs from './AffiliatedClubs.jsx';
+import Facilities, {facilities} from './Facilities.jsx';
+
+const pdf='/yercaud-club-tariff-september-2026.pdf';
+const affiliations=['Salem Club, Salem','Coimbatore Club, Coimbatore','Coonoor Club, Coonoor','Mangalore Club, Mangalore','Lotus Club, Ernakulam','Kadur Club, Chikmagalur','Umed Club, Jodhpur','Nasik Club, Nashik','The Karnataka State Billiards Association, Bangalore','Jaisal Club Ltd., Jaisalmer','Rama Varma Union Club, Kottayam','Deccan Gymkhana, Pune','The Presidency Club, Chennai','Madras Cricket Club, Chennai','Bamboo Club, Coorg','Cochin Club, Cochin','High Range Club, Munnar','Belur Club, Kodagu'];
+const menus={Breakfast:[['Idli · 2 pieces','70'],['Pongal','90'],['Plain dosa','80'],['Poori · 2 pieces','100'],['Eggs to order · 2 eggs','90']], 'Main course':[['Dhal fry','150'],['Paneer butter / kadai','220'],['Chicken gravy / masala','280'],['Mutton gravy / masala','410'],['Chapathi / phulka · 2 pieces','80']], 'Rice & biryani':[['Ghee rice / pulao / jeera rice','180'],['Veg biryani','230'],['Egg biryani','250'],['Chicken biryani','300'],['Mutton biryani','370']], 'Tea & dessert':[['Tea','50'],['Filter / black coffee','75'],['Caramel custard','80'],['Chocolate pudding','90'],['Gulab jamun · 2 pieces','100']]};
+const gallery=[{src:'club-life',label:'Good company at the clubhouse'},{src:'chamber',label:'A room to settle into'},{src:'tennis',label:'An afternoon on court'},{src:'players',label:'A shared love of the game'},{src:'gathering',label:'Together at Yercaud Club'},{src:'members',label:'Friends, old and new'}];
+function LinkButton({href,children,outline=false,...props}){return <SiteLink className={`button ${outline?'outline':''}`} href={href} {...props}>{children}<ArrowUpRight size={17}/></SiteLink>}
+function App(){
+ const routePath = window.location.pathname.slice(import.meta.env.BASE_URL.length-1);
+ const isFacilities = /^\/facilities(?:\/|$)/.test(routePath);
+ const isAffiliations = /^\/affiliated-clubs(?:\/|$)/.test(routePath);
+ const [menu,setMenu]=useState('Breakfast'),[guest,setGuest]=useState(false),[photo,setPhoto]=useState(0);
+ const dialog=useRef(null);
+ useEffect(()=>{
+   if(!window.location.hash)return;
+   let cancelled=false;
+   let frame;
+   // Page entry points render in React. Resolve deep links after layout and fonts settle.
+   document.fonts.ready.then(()=>{
+     if(cancelled)return;
+     frame=requestAnimationFrame(()=>{
+       let id;
+       try{id=decodeURIComponent(window.location.hash.slice(1))}catch{return}
+       document.getElementById(id)?.scrollIntoView({behavior:'instant',block:'start'});
+     });
+   });
+   return()=>{cancelled=true;cancelAnimationFrame(frame)};
+ },[]);
+
+ function openGallery(i){setPhoto(i);dialog.current.showModal();document.body.classList.add('gallery-is-open')}
+ return <>
+ <SiteLink className="skip" href="#main">Skip to content</SiteLink>
+ <Header page={isFacilities?'facilities':isAffiliations?'affiliations':'home'}/>
+ <main id="main">
+ {isAffiliations ? <AffiliatedClubs clubs={affiliations} pdf={pdf}/> : isFacilities ? <Facilities pdf={pdf} menus={menus}/> : <>
+ <section className="hero"><div className="hero-copy"><p className="eyebrow">YERCAUD, TAMIL NADU</p><h1>A tradition<br/>of <em>belonging.</em></h1><p className="hero-description">Good company. Unhurried days.<br/>A place in the hills to call your own, since 1897.</p><LinkButton href="/#club">Discover the club</LinkButton></div><div className="hero-photo"><ClubImage name="tennis-hero" sizes="100vw" alt="Blue tennis court beneath the trees, with the Yercaud Club building beyond" fetchPriority="high" width="1200" height="1600"/></div></section>
+ <nav className="heritage-strip" aria-label="Discover the club"><SiteLink href="/#stay">Stay in the hills <ArrowUpRight size={18}/></SiteLink><SiteLink href="/facilities/">Sport & leisure <ArrowUpRight size={18}/></SiteLink><SiteLink href="/affiliated-clubs/">Our affiliated clubs <ArrowUpRight size={18}/></SiteLink></nav>
+ <section id="club" className="club section"><div className="club-title"><span className="year">Since 1897</span><h2>Some places stay<br/>with you.</h2></div><div className="club-story"><p className="lead">The pleasure of familiar faces.<br/>The promise of a slower afternoon.</p><p>Established in 1897, Yercaud Club brings together the comforts of a stay in the hills and the simple pleasures of club life. Settle into a chamber, share a meal, or meet friends for a game.</p><SiteLink className="text-link" href="/affiliated-clubs/">Affiliated clubs <ArrowUpRight size={18}/></SiteLink></div></section>
+ <section id="stay" className="stay section"><div className="stay-image"><ClubImage name="chamber" alt="Yercaud Club chamber with a timber ceiling, wooden floor and double bed" loading="lazy" width="1200" height="900"/></div><div className="stay-content"><p className="eyebrow">MAKE YOURSELF AT HOME</p><h2>Stay a little<br/>longer.</h2><p>Timber ceilings, comfortable chambers, and time to yourself. A night away or a longer change of pace.</p><div className="segmented" aria-label="Tariff category"><button aria-pressed={!guest} onClick={()=>setGuest(false)}>Members</button><button aria-pressed={guest} onClick={()=>setGuest(true)}>Guests & affiliates</button></div><div className="room-price"><span>₹3,000<small> / day</small></span><p>Single or double occupancy</p></div>{guest&&<p className="guest-note">Plus ₹250 guest charge per person for member guests and affiliated members.</p>}<div className="extended-rates"><div><strong>₹16,000</strong><span>Weekly · 7 days minimum</span></div><div><strong>₹46,000</strong><span>Monthly · 28 days minimum</span></div></div><p className="fine">Extra person: ₹1,500 per person, per bed.</p><SiteLink className="text-link" href="tel:+914281222212">Enquire by phone <ArrowUpRight size={18}/></SiteLink></div></section>
+ <section id="leisure" className="all-facilities section" aria-labelledby="all-facilities-heading"><div className="section-intro"><h2 id="all-facilities-heading">Find your kind<br/>of club day.</h2><p>A morning on court. Time for yourself. An afternoon with friends.</p></div><div className="home-facility-photos"><SiteLink href="/facilities/#tennis"><ClubImage name="tennis" alt="Yercaud Club tennis court" width="1280" height="960" loading="lazy"/><span>Out on the court <ArrowUpRight size={24}/></span></SiteLink><SiteLink href="/facilities/#gym"><ClubImage name="gym" alt="Members in the club gym" width="1280" height="960" loading="lazy"/><span>Make time for yourself <ArrowUpRight size={24}/></span></SiteLink></div><div className="home-facility-links">{facilities.map(([id,name])=><SiteLink key={id} href={`/facilities/#${id}`}>{name}<ArrowUpRight size={17}/></SiteLink>)}</div><SiteLink className="text-link" href="/facilities/">Explore facilities <ArrowUpRight size={18}/></SiteLink></section>
+ <section id="dining" className="dining section"><div className="dining-intro"><p className="eyebrow">AT THE CLUB TABLE</p><h2>Come for a meal.<br/>Stay for the company.</h2><p>From a familiar South Indian breakfast to a leisurely lunch and a cup of filter coffee. There’s always something to linger over.</p><ClubImage name="gathering" alt="Club members gathered around the dining table beneath a timber ceiling" loading="lazy" width="1200" height="900"/></div><div className="menu-paper"><h3>A taste of the club</h3><div className="menu-tabs" aria-label="Menu categories">{Object.keys(menus).map(x=><button key={x} aria-pressed={menu===x} onClick={()=>setMenu(x)}>{x}</button>)}</div><div className="menu-items">{menus[menu].map(([name,price])=><div className="menu-item" key={name}><span>{name}</span><span>₹{price}</span></div>)}</div><p className="fine">Selected dishes from the club menu. Member guests and affiliated members: menu rates plus ₹250 guest charge per person.</p><SiteLink href={pdf} target="_blank" rel="noreferrer" className="text-link">Explore the full menu <ArrowUpRight size={18}/></SiteLink></div></section>
+ <section id="gallery" className="gallery section"><div className="gallery-heading"><h2>Life, at the club.</h2><span>A few moments from our home in the hills.</span></div><div className="gallery-grid">{gallery.slice(0,4).map((item,i)=><button className={`gallery-item gallery-${i}`} key={item.src} onClick={()=>openGallery(i)} aria-label={`Enlarge photo: ${item.label}`}><ClubImage name={item.src} alt={item.label} loading="lazy" width="1200" height="900"/><span>{item.label}<Plus size={18}/></span></button>)}</div><button className="text-link gallery-more" onClick={()=>openGallery(4)}>View more photographs <ArrowUpRight size={18}/></button></section>
+ <section id="affiliations" className="affiliations section"><div><h2>Familiar hospitality.<br/>A wider circle.</h2><p>Connected through 18 affiliated clubs. Visiting members can contact the club to enquire about access and arrangements.</p></div><div className="affiliation-preview"><span className="affiliation-count">18</span><p>A shared tradition of club life.</p><LinkButton href="/affiliated-clubs/">Affiliated clubs</LinkButton></div></section>
+ <section className="around-yercaud section"><div><h2>Beyond the club,<br/>the hills await.</h2><p>Yercaud sits in the Shevaroy Hills of Salem district. Make time for the lake, the surrounding greenery, and a change of pace.</p><SiteLink className="text-link" href="https://www.tnurbantree.tn.gov.in/salem/places-of-interest/" target="_blank" rel="noreferrer">Explore Yercaud <ArrowUpRight size={18}/></SiteLink></div><figure><ClubImage name="yercaud-lake" alt="Yercaud Lake surrounded by trees, photographed in 2007" width="1280" height="655" loading="lazy"/><figcaption>Yercaud Lake, 2007. <SiteLink href="https://commons.wikimedia.org/wiki/File:Yercaud_lake.jpg" target="_blank" rel="noreferrer">Riju K</SiteLink> / <SiteLink href="https://creativecommons.org/licenses/by-sa/2.0/" target="_blank" rel="noreferrer">CC BY-SA 2.0</SiteLink>. Resized, WebP conversion.</figcaption></figure></section>
+ <section id="visit" className="visit section"><p className="eyebrow">WE LOOK FORWARD TO WELCOMING YOU</p><h2>Your next chapter<br/>in the hills.</h2><p>For chamber availability, member visits, and affiliated club enquiries,<br className="desktop-break"/> speak with the Yercaud Club team.</p><LinkButton href="tel:+914281222212"><Phone size={18}/>04281 222212</LinkButton><div className="visit-details"><span><MapPin size={18}/>Jerina Nagar, Yercaud 636601</span><SiteLink href={pdf} download><DownloadSimple size={18}/>Download tariff & menu</SiteLink></div><SiteLink className="contact-email" href="mailto:yercaudclub@gmail.com">yercaudclub@gmail.com</SiteLink><p className="fine">Tariffs as listed in the club’s card dated 2 September 2026.<br/>Please confirm current rates and availability with the club.</p></section>
+ </>}
+ </main>
+ <footer><SiteLink className="footer-name" href="/">Yercaud Club <span>EST. 1897</span></SiteLink><span>Regd. No. 34/1900-1901</span><SiteLink href="/#visit">A tradition of belonging <ArrowUpRight size={16}/></SiteLink></footer>
+ <dialog ref={dialog} className="lightbox" onClick={e=>{if(e.target===dialog.current)dialog.current.close()}} onClose={()=>document.body.classList.remove('gallery-is-open')} onKeyDown={e=>{if(e.key==='ArrowRight'){e.preventDefault();setPhoto((photo+1)%gallery.length)}if(e.key==='ArrowLeft'){e.preventDefault();setPhoto((photo+gallery.length-1)%gallery.length)}}}><button className="close-lightbox" aria-label="Close gallery" onClick={()=>dialog.current.close()}><X size={28}/></button><ClubImage name={gallery[photo].src} sizes="90vw" alt={gallery[photo].label}/><div className="lightbox-bottom"><button aria-label="Previous photograph" onClick={()=>setPhoto((photo+gallery.length-1)%gallery.length)}><CaretLeft size={24}/></button><p>{gallery[photo].label}<small>{photo+1} of {gallery.length}</small></p><button aria-label="Next photograph" onClick={()=>setPhoto((photo+1)%gallery.length)}><CaretRight size={24}/></button></div></dialog>
+ </>
+}
+createRoot(document.getElementById('root')).render(<App/>);

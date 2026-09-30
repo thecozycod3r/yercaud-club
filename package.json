@@ -1,0 +1,21 @@
+{
+  "name": "yercaud-club",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "vite --host 0.0.0.0",
+    "build": "vite build && node scripts/finalize-build.mjs",
+    "preview": "vite preview --host 0.0.0.0"
+  },
+  "dependencies": {
+    "react": "^19.2.0",
+    "react-dom": "^19.2.0",
+    "@phosphor-icons/react": "^2.1.10",
+    "@fontsource/cormorant-garamond": "^5.2.0",
+    "@fontsource/manrope": "^5.2.0"
+  },
+  "devDependencies": {
+    "vite": "^7.1.0"
+  }
+}
