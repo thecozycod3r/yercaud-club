@@ -1,7 +1,7 @@
 import SiteLink, {sitePath} from './SiteLink.jsx';
 import ClubImage from './ClubImage.jsx';
 import React, {useState, useEffect, useRef} from 'react';
-import {ArrowUpRight, Phone, DownloadSimple, LockKey, Plus} from '@phosphor-icons/react';
+import {ArrowUpRight, Phone, DownloadSimple, Plus} from '@phosphor-icons/react';
 
 export const facilities = [
   ['tennis','Tennis'], ['badminton','Badminton'], ['billiards','Billiards'],
@@ -42,13 +42,13 @@ export default function Facilities({pdf, menus}) {
       <article id="tennis" className="facility-photo-item"><ClubImage name="tennis-hero" alt="Blue outdoor tennis court at Yercaud Club" width="1053" height="960" loading="lazy"/><h2>Tennis</h2><p>A game outdoors, with the trees all around. Meet friends on court for a friendly match.</p><SportRates/></article>
       <article id="badminton" className="facility-photo-item"><ClubImage name="badminton" alt="Members playing on the club’s indoor badminton court" width="720" height="1280" loading="lazy"/><h2>Badminton</h2><p>Keep the rally going on the indoor badminton court. A lively way to spend time at the club.</p><SportRates/></article>
     </section>
-    <section id="billiards" className="billiards-feature section"><figure><ClubImage name="billiards-stock" alt="Illustrative stock photograph of a green billiards table in a wood-panelled room" width="1600" height="1035" loading="lazy"/><figcaption>Illustrative stock photograph. <SiteLink href="https://unsplash.com/photos/green-billiard-table-near-window-bYFnZxKkMug" target="_blank" rel="noreferrer">Alexandra Zelena / Unsplash</SiteLink>.</figcaption></figure><div><h2>Billiards</h2><p>Take your time over a game. Billiards is part of the club’s sporting offering, with subscriptions for regular players.</p><SportRates billiards/></div></section>
+    <section id="billiards" className="billiards-feature section"><figure><ClubImage name="billiards-stock" alt="Illustrative stock photograph of a green billiards table in a wood-panelled room" width="1600" height="1035" loading="lazy"/></figure><div><h2>Billiards</h2><p>Take your time over a game. Billiards is part of the club’s sporting offering, with subscriptions for regular players.</p><SportRates billiards/></div></section>
     <section className="fitness-facilities section" aria-label="Table tennis and fitness">
       <article id="table-tennis" className="facility-photo-item"><ClubImage name="table-tennis" alt="Table tennis table in the club’s indoor sports area" width="1280" height="960" loading="lazy"/><h2>Table tennis</h2><p>Make time for a quick game or a little friendly competition at the table.</p></article>
       <article id="gym" className="facility-photo-item"><ClubImage name="gym" alt="Members gathered among fitness equipment in the club gym" width="1280" height="960" loading="lazy"/><h2>Gym</h2><p>Keep your workout part of your club routine. Ask the team about gym access and timings.</p></article>
     </section>
     <section className="support-facilities section" aria-label="Spaces around the game">
-      <article id="locker-room"><LockKey size={30} weight="light" aria-hidden="true"/><h2>Locker room</h2><p>A locker room is available at the club. The team can help with access and locker arrangements.</p></article>
+      <article id="locker-room" className="has-photo"><ClubImage name="locker-stock" alt="Rows of numbered metal lockers" width="1600" height="1143" loading="lazy"/><h2>Locker room</h2><p>A locker room is available at the club. The team can help with access and locker arrangements.</p></article>
       <article id="sports-lounge" className="has-photo"><ClubImage name="sports-lounge" alt="Members relaxing in the sports lounge beside the indoor court" width="1280" height="960" loading="lazy"/><h2>Sports lounge</h2><p>Take a break between games and enjoy time with friends in the sports lounge.</p></article>
     </section>
     <section id="dining" className="facility-dining section"><div className="facility-dining-intro"><ClubImage name="gathering" alt="Members sharing time together in the club dining room" width="1280" height="953" loading="lazy"/><h2>Dining</h2><p>Breakfast favourites, a leisurely lunch, and something sweet to finish. Good food and good company at the club table.</p></div><div className="menu-paper"><h3>A taste of the club</h3><div className="menu-tabs" aria-label="Menu categories">{Object.keys(menus).map(category=><button key={category} aria-pressed={menu===category} onClick={()=>setMenu(category)}>{category}</button>)}</div><div className="menu-items">{menus[menu].map(([name,price])=><div className="menu-item" key={name}><span>{name}</span><span>₹{price}</span></div>)}</div><p className="fine">Member guests and affiliated members: menu rates plus ₹250 guest charge per person.</p><SiteLink className="text-link" href={pdf} target="_blank" rel="noreferrer">Explore the full menu <ArrowUpRight size={18}/></SiteLink></div></section>

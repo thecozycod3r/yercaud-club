@@ -2,6 +2,7 @@ import SiteLink, {sitePath} from './SiteLink.jsx';
 import ClubImage from './ClubImage.jsx';
 import React, {useState} from 'react';
 import {clubWebsites} from './clubWebsites.js';
+import {clubPhotos} from './clubPhotos.js';
 import {ArrowUpRight, MagnifyingGlass, Phone, DownloadSimple} from '@phosphor-icons/react';
 
 export default function AffiliatedClubs({clubs, pdf}) {
@@ -26,9 +27,11 @@ export default function AffiliatedClubs({clubs, pdf}) {
       <p className="directory-count" role="status">{query.trim()||location!=='All locations' ? `${matches.length} of ${clubs.length} clubs` : `${clubs.length} affiliated clubs`}</p>
       {matches.length > 0 ? <ul className="directory-list">{matches.map(club=>{
         const divider=club.lastIndexOf(',');
-        return <li key={club}><h3>{club.slice(0,divider)}</h3><p>{club.slice(divider+1).trim()}</p>{clubWebsites[club]&&<SiteLink className="directory-website" href={clubWebsites[club]} target="_blank" rel="noreferrer" aria-label={`Club website: ${club.slice(0,divider)} (opens in a new tab)`}>Club website <ArrowUpRight size={14}/></SiteLink>}</li>;
+        const photo=clubPhotos[club];
+        return <li key={club}>{photo&&<figure className="directory-photo"><img src={sitePath(`/images/${photo.img}.webp`)} srcSet={`${sitePath(`/images/${photo.img}-480.webp`)} 480w, ${sitePath(`/images/${photo.img}.webp`)} 800w`} sizes="(max-width: 767px) calc(100vw - 48px), (max-width: 1099px) 45vw, 400px" alt={photo.isClub?`${photo.place} entrance`:`View of ${photo.place}`} width="800" height="600" loading="lazy" decoding="async"/><figcaption>{photo.isClub?'The club':photo.place}</figcaption></figure>}<h3>{club.slice(0,divider)}</h3><p>{club.slice(divider+1).trim()}</p>{clubWebsites[club]&&<SiteLink className="directory-website" href={clubWebsites[club]} target="_blank" rel="noreferrer" aria-label={`Club website: ${club.slice(0,divider)} (opens in a new tab)`}>Club website <ArrowUpRight size={14}/></SiteLink>}</li>;
       })}</ul> : <div className="directory-empty"><h3>No clubs found.</h3><p>Try another name or location, or clear your filters.</p><button className="text-link" onClick={clear}>Show all clubs <ArrowUpRight size={18}/></button></div>}
       <p className="directory-source">Affiliations listed in the club’s tariff card dated 2 September 2026.</p>
+      <details className="photo-credits"><summary>Photo credits</summary><p>Photographs of each club’s town, except where marked “The club”. From Wikimedia Commons:</p><ul>{clubs.filter(club=>clubPhotos[club]).map(club=>{const p=clubPhotos[club];return <li key={club}>{p.place}: <SiteLink href={p.source} target="_blank" rel="noreferrer">{p.artist}</SiteLink>, <SiteLink href={p.licenseUrl} target="_blank" rel="noreferrer">{p.license}</SiteLink> (cropped, resized)</li>})}</ul></details>
     </section>
     <section className="affiliate-visit section" aria-labelledby="affiliate-visit-heading">
       <div><h2 id="affiliate-visit-heading">Planning a visit?</h2><p>Affiliated members can contact Yercaud Club to confirm access, chamber availability, and arrangements before travelling.</p><SiteLink className="button" href="tel:+914281222212"><Phone size={18}/>04281 222212<ArrowUpRight size={17}/></SiteLink></div>

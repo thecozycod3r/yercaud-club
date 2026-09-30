@@ -12,5 +12,6 @@ export default {
   "chamber": "/images/chamber-480.webp 480w, /images/chamber-800.webp 800w, /images/chamber.webp 1280w",
   "table-tennis": "/images/table-tennis-480.webp 480w, /images/table-tennis-800.webp 800w, /images/table-tennis.webp 1280w",
   "badminton": "/images/badminton-480.webp 480w, /images/badminton-800.webp 800w, /images/badminton.webp 960w",
-  "billiards-stock": "/images/billiards-stock-480.webp 480w, /images/billiards-stock-800.webp 800w, /images/billiards-stock.webp 1600w"
+  "billiards-stock": "/images/billiards-stock-480.webp 480w, /images/billiards-stock-800.webp 800w, /images/billiards-stock.webp 1600w",
+  "locker-stock": "/images/locker-stock-480.webp 480w, /images/locker-stock-800.webp 800w, /images/locker-stock.webp 1600w"
 };

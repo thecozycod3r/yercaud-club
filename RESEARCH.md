@@ -50,3 +50,9 @@ All other photography and the logo come from the user’s supplied folder.
 ## Billiards stock photograph
 
 Added at the user's request because the supplied material did not contain an identifiable billiards photograph. Alexandra Zelena, "Green billiard table near window", published 19 August 2020: https://unsplash.com/photos/green-billiard-table-near-window-bYFnZxKkMug . Free commercial use under the Unsplash License: https://unsplash.com/license . Downloaded, resized and converted to WebP on 30 September 2026. The facility page explicitly labels it an illustrative stock photograph and credits its photographer. It is not presented as the actual Yercaud Club billiards room.
+
+## Updates, 30 September 2026 (afternoon)
+
+- The visible caption under the billiards photograph was removed at the user's request. The Unsplash License does not require attribution; the credit remains in `public/images/billiards-stock.LICENSE.txt` and above.
+- Locker room: illustrative Unsplash photograph by Barbara Burgess (https://unsplash.com/photos/SW7_vlHxk_0), Unsplash License. It is not the Yercaud Club locker room. See `public/images/locker-stock.LICENSE.txt`.
+- Affiliated clubs: only Madras Cricket Club and Cochin Club have freely licensed photographs on Wikimedia Commons (both show the entrance gate). Every other card shows a Commons photograph of the club's town, labelled with the town name. Photos were not taken from the clubs' own websites because those images are copyrighted. All 18 are CC BY or CC BY-SA, cropped to 4:3 and resized. Artist, license, and source for each are in `src/clubPhotos.js` and in the "Photo credits" list on the page.
