@@ -4,3 +4,4 @@ dist/
 checks/
 .env
 .env.*
+dist-ssr

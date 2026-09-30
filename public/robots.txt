@@ -1,2 +1,4 @@
 User-agent: *
 Allow: /
+
+Sitemap: https://thecozycod3r.github.io/yercaud-club/sitemap.xml

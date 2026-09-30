@@ -36,3 +36,7 @@
 .billiards-feature figcaption a{text-decoration:underline;text-underline-offset:3px}
 .billiards-feature .rates-disclosure{margin-top:25px}
 @media(max-width:767px){.billiards-feature{grid-template-columns:1fr;gap:26px}.billiards-feature figure img{height:260px}}
+.support-facilities{align-items:stretch}
+.support-facilities article:not(.has-photo){display:flex;flex-direction:column;justify-content:flex-end;background:var(--surface);padding:36px;border-top:0}
+@media (max-width:767px){.support-facilities article:not(.has-photo){padding:28px 24px}}
+.support-facilities .has-photo img{display:block;width:100%;aspect-ratio:4/3;object-fit:cover;margin-bottom:22px}

@@ -1,7 +1,7 @@
 import SiteLink, {sitePath} from './SiteLink.jsx';
 import ClubImage from './ClubImage.jsx';
 import React, {useState, useEffect, useRef} from 'react';
-import {ArrowUpRight, Phone, DownloadSimple, LockKey, Armchair, Plus} from '@phosphor-icons/react';
+import {ArrowUpRight, Phone, DownloadSimple, LockKey, Plus} from '@phosphor-icons/react';
 
 export const facilities = [
   ['tennis','Tennis'], ['badminton','Badminton'], ['billiards','Billiards'],
@@ -49,7 +49,7 @@ export default function Facilities({pdf, menus}) {
     </section>
     <section className="support-facilities section" aria-label="Spaces around the game">
       <article id="locker-room"><LockKey size={30} weight="light" aria-hidden="true"/><h2>Locker room</h2><p>A locker room is available at the club. The team can help with access and locker arrangements.</p></article>
-      <article id="sports-lounge"><Armchair size={30} weight="light" aria-hidden="true"/><h2>Sports lounge</h2><p>Take a break between games and enjoy time with friends in the sports lounge.</p></article>
+      <article id="sports-lounge" className="has-photo"><ClubImage name="sports-lounge" alt="Members relaxing in the sports lounge beside the indoor court" width="1280" height="960" loading="lazy"/><h2>Sports lounge</h2><p>Take a break between games and enjoy time with friends in the sports lounge.</p></article>
     </section>
     <section id="dining" className="facility-dining section"><div className="facility-dining-intro"><ClubImage name="gathering" alt="Members sharing time together in the club dining room" width="1280" height="953" loading="lazy"/><h2>Dining</h2><p>Breakfast favourites, a leisurely lunch, and something sweet to finish. Good food and good company at the club table.</p></div><div className="menu-paper"><h3>A taste of the club</h3><div className="menu-tabs" aria-label="Menu categories">{Object.keys(menus).map(category=><button key={category} aria-pressed={menu===category} onClick={()=>setMenu(category)}>{category}</button>)}</div><div className="menu-items">{menus[menu].map(([name,price])=><div className="menu-item" key={name}><span>{name}</span><span>₹{price}</span></div>)}</div><p className="fine">Member guests and affiliated members: menu rates plus ₹250 guest charge per person.</p><SiteLink className="text-link" href={pdf} target="_blank" rel="noreferrer">Explore the full menu <ArrowUpRight size={18}/></SiteLink></div></section>
     <section className="facility-enquiries section"><h2>Make a day of it.</h2><p>Speak with the club about facility access, timings, and arrangements for your visit.</p><div><SiteLink className="button" href="tel:+914281222212"><Phone size={18}/>04281 222212<ArrowUpRight size={17}/></SiteLink><SiteLink className="text-link" href={pdf} target="_blank" rel="noreferrer">View full tariff <DownloadSimple size={18}/></SiteLink></div><p className="fine">Published tariffs dated 2 September 2026. Please confirm current rates with the club.</p></section>

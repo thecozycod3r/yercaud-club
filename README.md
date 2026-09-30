@@ -57,3 +57,9 @@ Site: https://thecozycod3r.github.io/yercaud-club/
 Pushes to `main` run `.github/workflows/deploy.yml`. The production build uses `VITE_BASE_PATH=/yercaud-club/`. Internal links, responsive images, PDF URLs, and Markdown links are resolved beneath that path. Local development continues to use `/`.
 
 The billiards photograph is an illustrative Unsplash stock image with visible attribution; see its adjacent license file and `RESEARCH.md`.
+
+## Prerendering and search
+
+`npm run build` renders every page to static HTML (`src/entry-server.jsx` + `scripts/prerender.mjs`), and the browser hydrates it (`src/main.jsx`). Crawlers, WhatsApp/social link previews and no-JS visitors see full content. Page content lives in `src/App.jsx`.
+
+Each page carries a canonical URL and Open Graph tags (`public/images/og.jpg`, 1200×630). The homepage has `SportsClub` JSON-LD with address, phone, email and founding year. `public/sitemap.xml` is referenced from `robots.txt`. These use the GitHub Pages URL; update them if the club moves to its own domain.
