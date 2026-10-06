@@ -5,7 +5,7 @@ import {resolve} from 'node:path';
 // Render each entry point to static HTML so crawlers, link previews and no-JS visitors see the content.
 const base=process.env.VITE_BASE_PATH||'/';
 const {render}=await import(pathToFileURL(resolve('dist-ssr/entry-server.js')).href);
-const pages={'dist/index.html':'','dist/facilities/index.html':'facilities/','dist/affiliated-clubs/index.html':'affiliated-clubs/'};
+const pages={'dist/index.html':'','dist/facilities/index.html':'facilities/','dist/affiliated-clubs/index.html':'affiliated-clubs/','dist/history/index.html':'history/'};
 for(const [file,route] of Object.entries(pages)){
   const html=await readFile(file,'utf8');
   if(!html.includes('<div id="root"></div>'))throw new Error(`No empty root in ${file}`);

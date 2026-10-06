@@ -10,6 +10,7 @@ export default defineConfig({
         home: fileURLToPath(new URL('./index.html', import.meta.url)),
         facilities: fileURLToPath(new URL('./facilities/index.html', import.meta.url)),
         affiliations: fileURLToPath(new URL('./affiliated-clubs/index.html', import.meta.url)),
+        history: fileURLToPath(new URL('./history/index.html', import.meta.url)),
       },
     },
   },

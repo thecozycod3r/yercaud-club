@@ -25,6 +25,7 @@ The eight facilities are tennis, badminton, billiards, table tennis, gym, locker
 
 ## Further information
 
+- [Club history](/history/index.md)
 - [Facilities and sports tariffs](/facilities/index.md)
 - [Affiliated clubs](/affiliated-clubs/index.md)
 - [Original tariff card and full menu](/yercaud-club-tariff-september-2026.pdf)
