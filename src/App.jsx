@@ -61,7 +61,7 @@ export default function App({path}){
  </>}
  </main>
  <footer><SiteLink className="footer-name" href="/">Yercaud Club <span>EST. 1897</span></SiteLink><span>Regd. No. 34/1900-1901</span><SiteLink href="/#visit">A tradition of belonging <ArrowUpRight size={16}/></SiteLink></footer>
- <p className="site-credit">Developed by <a href="https://thecozycod3r.github.io/websites/yercaud-club/" target="_blank" rel="noopener">cozycod3r</a></p>
+ <div className="site-credit"><a href="https://thecozycod3r.github.io/websites/yercaud-club/" target="_blank" rel="noopener"><span>DEVELOPED BY</span><em>cozycod3r</em><ArrowUpRight size={14}/></a></div>
  <dialog ref={dialog} className="lightbox" onClick={e=>{if(e.target===dialog.current)dialog.current.close()}} onClose={()=>document.body.classList.remove('gallery-is-open')} onKeyDown={e=>{if(e.key==='ArrowRight'){e.preventDefault();setPhoto((photo+1)%gallery.length)}if(e.key==='ArrowLeft'){e.preventDefault();setPhoto((photo+gallery.length-1)%gallery.length)}}}><button className="close-lightbox" aria-label="Close gallery" onClick={()=>dialog.current.close()}><X size={28}/></button><ClubImage name={gallery[photo].src} sizes="90vw" alt={gallery[photo].label}/><div className="lightbox-bottom"><button aria-label="Previous photograph" onClick={()=>setPhoto((photo+gallery.length-1)%gallery.length)}><CaretLeft size={24}/></button><p>{gallery[photo].label}<small>{photo+1} of {gallery.length}</small></p><button aria-label="Next photograph" onClick={()=>setPhoto((photo+1)%gallery.length)}><CaretRight size={24}/></button></div></dialog>
  </>
 }

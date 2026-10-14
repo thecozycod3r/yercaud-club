@@ -85,4 +85,4 @@
 .history-timeline h3{font-size:26px}
 .history-125 dt{font-size:23px}
 }
-.site-credit{max-width:1440px;margin:-12px auto 0;padding:0 var(--gutter) 28px;font-size:11px;line-height:1.6;color:var(--muted)}.site-credit a{text-decoration:underline;text-underline-offset:3px}
+.site-credit{max-width:1440px;margin:auto;padding:22px var(--gutter) 30px;border-top:1px solid var(--line);display:flex;justify-content:center}.site-credit a{display:inline-flex;align-items:baseline;gap:12px;min-height:44px;align-items:center;padding:8px 18px;border:1px solid var(--line);border-radius:4px;transition:border-color .2s,background .2s}.site-credit a:hover,.site-credit a:focus-visible{border-color:var(--accent);background:var(--tint)}.site-credit span{font-size:10px;font-weight:600;letter-spacing:2px;color:var(--muted)}.site-credit em{font:italic 24px/1 var(--serif);color:var(--accent);letter-spacing:-.2px}.site-credit svg{color:var(--accent);transition:transform .2s}.site-credit a:hover svg{transform:translate(2px,-2px)}
