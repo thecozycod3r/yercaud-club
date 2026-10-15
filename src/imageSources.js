@@ -1,4 +1,5 @@
 export default {
+  "locker-room": "/images/locker-room-480.webp 480w, /images/locker-room-800.webp 800w, /images/locker-room.webp 960w",
   "billiards-room": "/images/billiards-room-480.webp 480w, /images/billiards-room-800.webp 800w, /images/billiards-room.webp 1280w",
   "clubhouse-hall": "/images/clubhouse-hall-480.webp 480w, /images/clubhouse-hall-800.webp 800w, /images/clubhouse-hall.webp 1280w",
   "lounge": "/images/lounge-480.webp 480w, /images/lounge-800.webp 800w, /images/lounge.webp 1280w",

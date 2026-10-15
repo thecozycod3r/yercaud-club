@@ -56,7 +56,7 @@ Site: https://thecozycod3r.github.io/yercaud-club/
 
 Pushes to `main` run `.github/workflows/deploy.yml`. The production build uses `VITE_BASE_PATH=/yercaud-club/`. Internal links, responsive images, PDF URLs, and Markdown links are resolved beneath that path. Local development continues to use `/`.
 
-The billiards photograph is the club’s own billiards room (club photos, 15 Oct 2026). The earlier Unsplash stock image (`billiards-stock`) is no longer used on the page.
+The billiards and locker-room photographs are the club’s own (club photos, 15 Oct 2026). The earlier stock images (`billiards-stock`, `locker-stock`) are no longer used on the page.
 
 ## Prerendering and search
 
