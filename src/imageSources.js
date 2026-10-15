@@ -1,4 +1,9 @@
 export default {
+  "bonfire": "/images/bonfire-480.webp 480w, /images/bonfire-800.webp 800w, /images/bonfire.webp 1280w",
+  "court-opening": "/images/court-opening-480.webp 480w, /images/court-opening-800.webp 800w, /images/court-opening.webp 960w",
+  "card-table": "/images/card-table-480.webp 480w, /images/card-table-800.webp 800w, /images/card-table.webp 1280w",
+  "evening-out": "/images/evening-out-480.webp 480w, /images/evening-out-800.webp 800w, /images/evening-out.webp 1280w",
+  "club-bar": "/images/club-bar-480.webp 480w, /images/club-bar-800.webp 800w, /images/club-bar.webp 1280w",
   "gym-rack": "/images/gym-rack-480.webp 480w, /images/gym-rack-800.webp 800w, /images/gym-rack.webp 1280w",
   "gym-members": "/images/gym-members-480.webp 480w, /images/gym-members-800.webp 800w, /images/gym-members.webp 1280w",
   "locker-room": "/images/locker-room-480.webp 480w, /images/locker-room-800.webp 800w, /images/locker-room.webp 960w",
