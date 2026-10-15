@@ -5,3 +5,4 @@ checks/
 .env
 .env.*
 dist-ssr
+source-photos/
