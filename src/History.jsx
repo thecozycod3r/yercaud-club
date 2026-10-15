@@ -53,6 +53,11 @@ export default function History(){
       <div className="history-founders"><h3>The founding committee</h3><ul>{founders.map(name=><li key={name}>{name}</li>)}</ul><p>All coffee planters, who stood personal guarantee for the club’s first loan.</p></div>
     </section>
 
+    <section className="history-photos section" aria-label="Around the clubhouse">
+      <figure><ClubImage name="club-plaque" sizes="(max-width: 767px) calc(100vw - 48px), 34vw" alt="A dark plaque reading “Yercaud Club” set into the clubhouse’s stone wall" width="960" height="1280" loading="lazy"/><figcaption>The club’s name, set into the clubhouse wall.</figcaption></figure>
+      <figure><ClubImage name="library" sizes="(max-width: 767px) calc(100vw - 48px), 60vw" alt="Shelves of old, cloth-bound books in the club library" width="1280" height="960" loading="lazy"/><figcaption>The club library. Reading has been part of club life since the first reading room.</figcaption></figure>
+    </section>
+
     <section className="history-timeline section" aria-labelledby="timeline-heading">
       <h2 id="timeline-heading">Through the years.</h2>
       <ol>{timeline.map(([date,title,text])=><li key={date}><span className="history-date">{date}</span><div><h3>{title}</h3><p>{text}</p></div></li>)}</ol>
