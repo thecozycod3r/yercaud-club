@@ -1,4 +1,11 @@
 export default {
+  "billiards-room": "/images/billiards-room-480.webp 480w, /images/billiards-room-800.webp 800w, /images/billiards-room.webp 1280w",
+  "clubhouse-hall": "/images/clubhouse-hall-480.webp 480w, /images/clubhouse-hall-800.webp 800w, /images/clubhouse-hall.webp 1280w",
+  "lounge": "/images/lounge-480.webp 480w, /images/lounge-800.webp 800w, /images/lounge.webp 1280w",
+  "verandah": "/images/verandah-480.webp 480w, /images/verandah-800.webp 800w, /images/verandah.webp 960w",
+  "library": "/images/library-480.webp 480w, /images/library-800.webp 800w, /images/library.webp 1280w",
+  "cue-rack": "/images/cue-rack-480.webp 480w, /images/cue-rack-800.webp 800w, /images/cue-rack.webp 960w",
+  "club-plaque": "/images/club-plaque-480.webp 480w, /images/club-plaque-800.webp 800w, /images/club-plaque.webp 960w",
   "club-life": "/images/club-life-480.webp 480w, /images/club-life-800.webp 800w, /images/club-life.webp 1280w",
   "sports-lounge": "/images/sports-lounge-480.webp 480w, /images/sports-lounge-800.webp 800w, /images/sports-lounge.webp 1280w",
   "players": "/images/players-480.webp 480w, /images/players-800.webp 800w, /images/players.webp 1280w",
