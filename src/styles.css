@@ -123,3 +123,8 @@
 .brand{color:var(--ink)}
 .brand .crest{box-sizing:content-box;padding:7px;border-radius:6px;background:#f4ece2;-webkit-mask:none;mask:none;position:relative}
 .brand .crest::after{content:"";position:absolute;inset:7px;background:var(--club-red);-webkit-mask:var(--crest) center/contain no-repeat;mask:var(--crest) center/contain no-repeat}
+/* Whole lockup on one ivory plate so the name can be Yercaud red, as on the logo */
+.brand{color:var(--club-red);background:#f4ece2;padding:7px 18px 7px 8px;border-radius:6px;gap:12px}
+.brand .crest{padding:0;background:none}
+.brand .crest::after{inset:0}
+@media(max-width:767px){.brand{padding:5px 12px 5px 6px;gap:9px}}
