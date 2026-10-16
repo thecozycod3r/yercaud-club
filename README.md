@@ -52,7 +52,7 @@ Validation covers 320px through 1440px viewports, light/dark themes, reduced mot
 
 Repository: https://github.com/thecozycod3r/yercaud-club
 
-Site: https://thecozycod3r.github.io/yercaud-club/
+Site: https://yercaudclub.com/
 
 Pushes to `main` run `.github/workflows/deploy.yml`. The production build uses `VITE_BASE_PATH=/yercaud-club/`. Internal links, responsive images, PDF URLs, and Markdown links are resolved beneath that path. Local development continues to use `/`.
 

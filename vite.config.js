@@ -1,9 +1,10 @@
 import {defineConfig} from 'vite';
 import {fileURLToPath} from 'node:url';
 
+// Served from the custom domain root (yercaudclub.com). Set SITE_BASE for a subpath preview build.
 // Generate a real page so direct links work on static hosts without SPA rewrites.
 export default defineConfig({
-  base: process.env.VITE_BASE_PATH || '/',
+  base: process.env.SITE_BASE || '/',
   build: {
     rollupOptions: {
       input: {

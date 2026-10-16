@@ -3,7 +3,7 @@ import {pathToFileURL} from 'node:url';
 import {resolve} from 'node:path';
 
 // Render each entry point to static HTML so crawlers, link previews and no-JS visitors see the content.
-const base=process.env.VITE_BASE_PATH||'/';
+const base=process.env.SITE_BASE||'/';
 const {render}=await import(pathToFileURL(resolve('dist-ssr/entry-server.js')).href);
 const pages={'dist/index.html':'','dist/facilities/index.html':'facilities/','dist/affiliated-clubs/index.html':'affiliated-clubs/','dist/history/index.html':'history/'};
 for(const [file,route] of Object.entries(pages)){

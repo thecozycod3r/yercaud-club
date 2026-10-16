@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://thecozycod3r.github.io/yercaud-club/sitemap.xml
+Sitemap: https://yercaudclub.com/sitemap.xml

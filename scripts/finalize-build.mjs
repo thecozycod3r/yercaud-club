@@ -1,7 +1,7 @@
 import {readdir,readFile,writeFile} from 'node:fs/promises';
 import {join} from 'node:path';
-const base=process.env.VITE_BASE_PATH||'/';
-if(!base.startsWith('/')||!base.endsWith('/'))throw new Error('VITE_BASE_PATH must start and end with a slash.');
+const base=process.env.SITE_BASE||'/';
+if(!base.startsWith('/')||!base.endsWith('/'))throw new Error('SITE_BASE must start and end with a slash.');
 async function processDir(dir){
   for(const entry of await readdir(dir,{withFileTypes:true})){
     const path=join(dir,entry.name);
