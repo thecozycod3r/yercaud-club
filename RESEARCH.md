@@ -13,7 +13,7 @@ No memberships, equipment specifications, opening hours, dress codes or access r
 
 ## Public mentions and verified information
 
-- [Rama Varma Union Club affiliations](https://www.ramavarmaunionclub.com/affiliations): lists Yercaud Club, Jerina Nagar, Yercaud 636601, and yercaudclub@gmail.com. Address and email are used in the contact area. Its phone number differs from the supplied 2026 tariff card; that number is not used.
+- [Rama Varma Union Club affiliations](https://www.ramavarmaunionclub.com/affiliations): lists Yercaud Club, Jerina Nagar, Yercaud 636601, and yercaudclub@gmail.com. Email is used in the contact area; the club asked (16 Oct 2026) for the address to read "Yercaud Club, Yercaud 636601" without Jerina Nagar. Its phone number differs from the supplied 2026 tariff card; that number is not used.
 - [KSBA reciprocal affiliations](https://www.myksba.com/Affiliated.pdf): independently lists Yercaud Club and the same email. Its truncated phone number is not used.
 - [Cauvery Peak history](https://cauverypeakestate.com/pages/history): mentions Yercaud Club in its account of local plantation leadership. Researched, but current office-holder claims and detailed historical narrative were not added because the material does not establish a complete club history.
 - [Salem City Municipal Corporation places of interest](https://www.tnurbantree.tn.gov.in/salem/places-of-interest/): supports the geographical context of Yercaud in the Shevaroy Hills, Salem district. Linked from the new local-context section.

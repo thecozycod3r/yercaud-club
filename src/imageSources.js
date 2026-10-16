@@ -28,5 +28,19 @@ export default {
   "table-tennis": "/images/table-tennis-480.webp 480w, /images/table-tennis-800.webp 800w, /images/table-tennis.webp 1280w",
   "badminton": "/images/badminton-480.webp 480w, /images/badminton-800.webp 800w, /images/badminton.webp 960w",
   "billiards-stock": "/images/billiards-stock-480.webp 480w, /images/billiards-stock-800.webp 800w, /images/billiards-stock.webp 1600w",
-  "locker-stock": "/images/locker-stock-480.webp 480w, /images/locker-stock-800.webp 800w, /images/locker-stock.webp 1600w"
+  "locker-stock": "/images/locker-stock-480.webp 480w, /images/locker-stock-800.webp 800w, /images/locker-stock.webp 1600w",
+  "room-brick": "/images/room-brick-480.webp 480w, /images/room-brick-800.webp 800w, /images/room-brick.webp 960w",
+  "chamber-wardrobe": "/images/chamber-wardrobe-480.webp 480w, /images/chamber-wardrobe-800.webp 800w, /images/chamber-wardrobe.webp 960w",
+  "dining-room": "/images/dining-room-480.webp 480w, /images/dining-room-800.webp 800w, /images/dining-room.webp 960w",
+  "bar-room": "/images/bar-room-480.webp 480w, /images/bar-room-800.webp 800w, /images/bar-room.webp 960w",
+  "reading-room": "/images/reading-room-480.webp 480w, /images/reading-room-800.webp 800w, /images/reading-room.webp 1280w",
+  "clock-corner": "/images/clock-corner-480.webp 480w, /images/clock-corner-800.webp 800w, /images/clock-corner.webp 960w",
+  "fireplace": "/images/fireplace-480.webp 480w, /images/fireplace-800.webp 800w, /images/fireplace.webp 1280w",
+  "revolving-bookcase": "/images/revolving-bookcase-480.webp 480w, /images/revolving-bookcase-800.webp 800w, /images/revolving-bookcase.webp 960w",
+  "table-tennis-room": "/images/table-tennis-room-480.webp 480w, /images/table-tennis-room-800.webp 800w, /images/table-tennis-room.webp 960w",
+  "indoor-court": "/images/indoor-court-480.webp 480w, /images/indoor-court-800.webp 800w, /images/indoor-court.webp 960w",
+  "gym-floor": "/images/gym-floor-480.webp 480w, /images/gym-floor-800.webp 800w, /images/gym-floor.webp 1280w",
+  "wall-plates": "/images/wall-plates-480.webp 480w, /images/wall-plates-800.webp 800w, /images/wall-plates.webp 960w",
+  "card-room": "/images/card-room-480.webp 480w, /images/card-room-800.webp 800w, /images/card-room.webp 1280w",
+  "courtside": "/images/courtside-480.webp 480w, /images/courtside-800.webp 800w, /images/courtside.webp 1280w"
 };

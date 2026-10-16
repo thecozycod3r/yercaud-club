@@ -54,7 +54,7 @@ export default function History(){
     </section>
 
     <section className="history-photos section" aria-label="Around the clubhouse">
-      <figure><ClubImage name="club-plaque" sizes="(max-width: 767px) calc(100vw - 48px), 34vw" alt="A dark plaque reading “Yercaud Club” set into the clubhouse’s stone wall" width="960" height="1280" loading="lazy"/><figcaption>The club’s name, set into the clubhouse wall.</figcaption></figure>
+      <figure><ClubImage name="club-plaque" sizes="(max-width: 767px) calc(100vw - 48px), 34vw" alt="A dark plaque reading “Yercaud Club” set into the stone of the entrance wall" width="960" height="1280" loading="lazy"/><figcaption>The club’s name, set into the entrance wall.</figcaption></figure>
       <figure><ClubImage name="library" sizes="(max-width: 767px) calc(100vw - 48px), 60vw" alt="Shelves of old, cloth-bound books in the club library" width="1280" height="960" loading="lazy"/><figcaption>The club library. Reading has been part of club life since the first reading room.</figcaption></figure>
     </section>
 

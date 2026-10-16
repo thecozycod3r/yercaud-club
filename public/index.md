@@ -1,6 +1,6 @@
 # Yercaud Club
 
-Established in 1897, Yercaud Club is in Jerina Nagar, Yercaud, Tamil Nadu 636601, India.
+Established in 1897, Yercaud Club is at Yercaud Club, Yercaud, Tamil Nadu 636601, India.
 
 - Phone: +91 4281 222212
 - Email: yercaudclub@gmail.com
