@@ -128,3 +128,56 @@
 .brand .crest{padding:0;background:none}
 .brand .crest::after{inset:0}
 @media(max-width:767px){.brand{padding:5px 12px 5px 6px;gap:9px}}
+/* ---- Exploration: the club's own typeface and colours throughout ---- */
+:root{--serif:'Manrope',sans-serif;--display:'Cutive',Georgia,serif}
+h1,h2{font-family:var(--display);font-weight:400;letter-spacing:0}
+h3{font-weight:500;letter-spacing:-.2px}
+h1 em,h2 em{font-style:normal;color:inherit}
+h1{font-size:clamp(44px,4.6vw,66px);line-height:1.08}
+h2{font-size:clamp(32px,3.3vw,48px);line-height:1.12}
+h3{font-size:26px;line-height:1.2}
+.hero h1{font-size:clamp(52px,5.6vw,84px);line-height:1.04;letter-spacing:-.5px}
+.club-story .lead{font-size:21px;line-height:1.5;font-weight:400}
+.room-price>span{font-size:40px}
+.extended-rates strong{font-size:25px}
+.home-facility-photos>a>span{font-size:23px}
+.affiliation-count{font-size:76px}
+.visit h2{font-size:clamp(40px,4.4vw,60px)}
+.mobile-menu-top>span{font-size:24px}
+.mobile-menu nav a{font-size:26px}
+.history-prose .lead{font-size:22px}
+.history-founders li{font-size:19px}
+.history-125 dt{font-size:20px}
+.facilities-intro h1,.affiliate-intro h1{font-size:clamp(40px,4.4vw,60px)}
+.site-credit em{font-family:'Cormorant Garamond',Georgia,serif}
+.button,.header-cta{letter-spacing:.2px}
+@media(max-width:767px){h1{font-size:40px}h2{font-size:31px}.hero h1{font-size:clamp(44px,12vw,60px)}.visit h2{font-size:40px}.facilities-intro h1,.affiliate-intro h1{font-size:38px}.club-story .lead{font-size:21px}}
+.menu-paper h3{font-size:30px}
+@media(max-width:767px){.hero h1{font-size:clamp(40px,10.4vw,54px)}.club-story .lead{font-size:20px}}
+/* Calmer pass: one display face for headings only, quieter weights */
+h1{font-size:clamp(40px,4.2vw,58px)}
+h2{font-size:clamp(30px,3vw,42px)}
+.hero h1{font-size:clamp(46px,5vw,72px)}
+.visit h2{font-size:clamp(36px,4vw,52px)}
+.room-price>span{font-size:36px;font-weight:400}
+.extended-rates strong{font-size:22px;font-weight:500}
+.home-facility-photos>a>span{font-size:19px;font-weight:400}
+.affiliation-count{font-family:var(--display);font-size:68px}
+.mobile-menu-top>span{font-family:var(--display)}
+.history-prose .lead{font-size:19px;line-height:1.55}
+.history-founders li{font-size:16px}
+.history-125 dt{font-size:16px;font-weight:600}
+.menu-paper h3{font-family:var(--display);font-weight:400}
+
+/* Trial: Yercaud red on black. Black top to bottom, the crest alone in the header, no plate. */
+:root{--paper:#0e0c0c;--surface:#171414;--ink:#f1e9e4;--muted:#b9aea9;--accent:#ecdcc8;--tint:#2a1a1c;--line:#2c2627;--button-text:#fbf3ea}
+.visit,.facility-enquiries,.affiliate-visit,.site-foot{--surface:#0e0c0c;--paper:#0e0c0c;--ink:#f1e9e4;--muted:#b9aea9;--accent:#ecdcc8;--line:#2c2627;--button-text:#fbf3ea;background:#0e0c0c}
+.visit,.facility-enquiries,.affiliate-visit{border-top:1px solid var(--line)}
+.visit .button,.facility-enquiries .button,.affiliate-visit .button{background:var(--club-red);border-color:var(--club-red);color:var(--button-text)}
+.site-foot .site-credit a{background:var(--club-red);border-color:var(--club-red);color:var(--button-text)}
+.site-foot .site-credit a:hover,.site-foot .site-credit a:focus-visible{background:transparent;color:var(--ink)}
+.brand{background:none;padding:0;border-radius:0;color:var(--club-red)}
+.brand>.wordmark{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+.brand .crest{width:62px;height:70px;padding:0;background:none}
+.brand .crest::after{inset:0;background:#7a0d19}
+@media(max-width:767px){.brand{padding:0}.brand .crest{width:48px;height:54px}}
